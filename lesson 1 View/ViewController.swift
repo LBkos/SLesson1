@@ -6,14 +6,51 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let roundedView = UIView()
+        roundedView.layer.insertSublayer(setGradientBackground(colorTop: .systemBlue, colorBottom: .systemRed), at: 0)
+        roundedView.layer.shadowColor = UIColor.darkGray.cgColor
+        roundedView.layer.shadowOpacity = 1
+        roundedView.layer.shadowOffset = .zero
+        roundedView.layer.shadowRadius = 10
+        
+        view.addSubview(roundedView)
+        
+        roundedView.translatesAutoresizingMaskIntoConstraints = false
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            roundedView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 100),
+            roundedView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            roundedView.widthAnchor.constraint(equalToConstant: 100),
+            roundedView.heightAnchor.constraint(equalToConstant: 100),
+        ])
     }
+    
+    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) -> CALayer {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = CGRect(x: 1, y: 1, width: 100, height: 100)
+        gradientLayer.cornerRadius = 16
+        
 
+       return gradientLayer
+    }
 
 }
 
+struct ViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        ViewControllerPreview {
+            ViewController()
+        }
+    }
+}

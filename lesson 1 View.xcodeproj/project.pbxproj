@@ -13,6 +13,7 @@
 		B53F117529AF494600DA9B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53F117329AF494600DA9B8D /* Main.storyboard */; };
 		B53F117729AF494700DA9B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53F117629AF494700DA9B8D /* Assets.xcassets */; };
 		B53F117A29AF494700DA9B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53F117829AF494700DA9B8D /* LaunchScreen.storyboard */; };
+		B53F118229AF4B4F00DA9B8D /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F118129AF4B4F00DA9B8D /* ViewControllerPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B53F117629AF494700DA9B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B53F117929AF494700DA9B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53F117B29AF494700DA9B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B53F118129AF4B4F00DA9B8D /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B53F116D29AF494600DA9B8D /* AppDelegate.swift */,
 				B53F116F29AF494600DA9B8D /* SceneDelegate.swift */,
 				B53F117129AF494600DA9B8D /* ViewController.swift */,
+				B53F118129AF4B4F00DA9B8D /* ViewControllerPreview.swift */,
 				B53F117329AF494600DA9B8D /* Main.storyboard */,
 				B53F117629AF494700DA9B8D /* Assets.xcassets */,
 				B53F117829AF494700DA9B8D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				B53F117229AF494600DA9B8D /* ViewController.swift in Sources */,
 				B53F116E29AF494600DA9B8D /* AppDelegate.swift in Sources */,
 				B53F117029AF494600DA9B8D /* SceneDelegate.swift in Sources */,
+				B53F118229AF4B4F00DA9B8D /* ViewControllerPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
