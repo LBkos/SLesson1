@@ -21,15 +21,20 @@ class ViewController: UIViewController {
         roundedView.layer.shadowRadius = 10
         
         view.addSubview(roundedView)
+        view.backgroundColor = .purple
         
         roundedView.translatesAutoresizingMaskIntoConstraints = false
-        let margins = view.layoutMarginsGuide
         NSLayoutConstraint.activate([
-            roundedView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 100),
+            roundedView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             roundedView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             roundedView.widthAnchor.constraint(equalToConstant: 100),
             roundedView.heightAnchor.constraint(equalToConstant: 100),
         ])
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) -> CALayer {
@@ -44,6 +49,7 @@ class ViewController: UIViewController {
 
        return gradientLayer
     }
+    
 
 }
 
