@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         roundedView.layer.shadowRadius = 10
         
         view.addSubview(roundedView)
-        view.backgroundColor = .purple
         
         roundedView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
